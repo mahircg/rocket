@@ -804,7 +804,7 @@ class HellaCache(implicit p: Parameters) extends L1HellaCacheModule()(p) {
   val s3_valid = Reg(init=Bool(false))
   val s3_req = Reg(io.cpu.req.bits)
   val s3_way = Reg(Bits())
-  val s3_req_data = Reg(Bits(width=coreDataBits))  // do not use the data in s2_req as tag will be lost
+  val s3_req_data = Reg(Bits(width=coreDataBitsTagged))  // do not use the data in s2_req as tag will be lost
 
   val s1_recycled = RegEnable(s2_recycle, Bool(false), s1_clk_en)
   val s1_read  = isRead(s1_req.cmd)
