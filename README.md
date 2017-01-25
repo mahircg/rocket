@@ -1,3 +1,5 @@
+Updated for privilege mode v1.91 compatibility 25/01/17.
+
 Rocket Core
 ===========
 
